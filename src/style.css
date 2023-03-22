@@ -139,12 +139,12 @@ body {
     float: left;
 }
 
-.Right-side{
+.News-Feed{
     float: right;
     flex-grow: 1;
     overflow-y: scroll;
 }
 
-.Right-side::-webkit-scrollbar{
+.News-Feed::-webkit-scrollbar{
     display: none;
 }
