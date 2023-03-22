@@ -7,10 +7,9 @@ import "./style.css"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Engineering from './departments/Engineering';
 import Business from './departments/Business';
-import {Amplify, API} from "aws-amplify";
+import Amplify from "aws-amplify";
 import awsExports from "./aws-exports";
 Amplify.configure(awsExports);
-API.configure(awsExports);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
