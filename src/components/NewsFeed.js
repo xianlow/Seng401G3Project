@@ -1,17 +1,22 @@
 import React from "react";
-
-function sayHello() {
-    alert('You clicked me!');
-  }
+import { Route, Routes, useNavigate, Link } from "react-router-dom";
+import Login from "./Login";
 
 function NewsFeed(){
+    const navigate = useNavigate();
+    const navToLogin = () => {
+        navigate('/Login');
+    }  
     return(
         <div className="feed">
             <div className="title">
                 <div>
-                    <button onClick={sayHello}>Log In</button>
+                    <button onClick={navToLogin}>Log In</button>
+                    <Routes>
+                    <Route exact path='/Login' element={<Login/>} />
+                    </Routes>
                 </div>
-                <h2>What's New in Rhapsody</h2>
+                <Link to="/"><h2>What's New in Rhapsody</h2></Link>
             </div>
         </div>
     );
