@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import "./style.css"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Engineering from './departments/Engineering';
-import Business from './departments/Business';
+import Login from './components/Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,7 +15,7 @@ root.render(
       <Routes>
         <Route path='/' element={<App/>} />
         <Route exact path='/Engineering' element={<Engineering/>} />
-        <Route exact path='/Business' element={<Business/>} />
+        <Route exact path='/Login' element={<Login/>} />
       </Routes>
     </Router>
   </React.StrictMode>
