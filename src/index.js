@@ -7,6 +7,7 @@ import "./style.css"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Engineering from './departments/Engineering';
 import Login from './components/Login';
+import AdminPage from './departments/AdminPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,7 @@ root.render(
         <Route path='/' element={<App/>} />
         <Route exact path='/Engineering' element={<Engineering/>} />
         <Route exact path='/Login' element={<Login/>} />
+        <Route exact path='/AdminPage' element={<AdminPage/>} />
       </Routes>
     </Router>
   </React.StrictMode>
