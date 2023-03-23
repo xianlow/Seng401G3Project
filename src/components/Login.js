@@ -2,21 +2,43 @@ import React from "react"
 import NewsFeed from "./NewsFeed";
 import { useNavigate } from "react-router-dom";
 
-function Login(){
+
+function Login() {
     const navigate = useNavigate();
     const navToAdmin = () => {
         navigate('/AdminPage');
-    }  
-    return(
+    }
+
+    const check_login = () => {
+        const username = document.getElementById("userName").value;
+
+        if(username.localeCompare("admin")) {
+            alert("ERROR. Incorrect Username.");
+            return false;
+        }
+        check_password();
+    }
+
+    const check_password = () => {
+        const password = document.getElementById("password").value;
+
+        if(password.localeCompare("testpassword")) {
+            alert("Error. Incorrect Password");
+            return false;
+        }
+        navToAdmin();
+    }
+
+    return (
         <div className = "News-Feed">
             <NewsFeed />
             <div className = "login">
-            <form onSubmit={navToAdmin}>
+            <form onSubmit={check_login}>
                 <label for="userName">Username:</label><br />
-                <input type="text" id="userName" name="userName" required /><br />
+                <input type="text" id="userName" placeholder="Enter Username" name="userName" required /><br />
                 <label for="password">Password:</label><br />
-                <input type="password" id="password" name="password" required /> <br />
-                <input type="submit" value="Submit" />
+                <input type="password" id="password" placeholder="Enter Password" name="password" required /> <br />
+                <input type="submit" value="Submit"  />
             </form>
             </div>
         </div>
