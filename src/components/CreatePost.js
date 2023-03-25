@@ -77,7 +77,7 @@ export default class CreatePost extends Component {
                 </div>
               ) : (
                 <div>
-                  <div className="form-group">
+                  {/* <div className="form-group">
                     <label htmlFor="title">Title</label>
                     <input
                       type="text"
@@ -88,10 +88,11 @@ export default class CreatePost extends Component {
                       onChange={this.onChangeTitle}
                       name="eventId"
                     />
-                  </div>
+                  </div> */}
       
                   <div className="form-group">
-                    <label htmlFor="description">Description</label>
+                    <h2>Create New Post</h2>
+                    <br/>
                     <textarea
                       placeholder="contents" 
                       rows="8" 
