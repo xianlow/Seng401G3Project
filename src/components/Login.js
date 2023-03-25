@@ -1,7 +1,7 @@
 import React from "react"
 import NewsFeed from "./NewsFeed";
 import { useNavigate } from "react-router-dom";
-
+import "../styles/Login.css";
 
 function Login() {
     const navigate = useNavigate();
@@ -29,6 +29,7 @@ function Login() {
         navToAdmin();
     }
 
+    // if User correct, check password. if Script checks for existences of users, just needs to overrride one flag
     return (
         <div className = "News-Feed">
             <NewsFeed />

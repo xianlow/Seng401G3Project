@@ -1,7 +1,7 @@
-
 import React, { Component } from "react";
 import testServices from "../services/testServices";
 import { withRouter } from '../common/with-router';
+import "../styles/Post.css";
 
 class Post extends Component {
   constructor(props) {

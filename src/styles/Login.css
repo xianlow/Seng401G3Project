@@ -1,0 +1,6 @@
+.login{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    margin: auto;
+}

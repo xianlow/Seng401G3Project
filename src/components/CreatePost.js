@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import testServices from "../services/testServices";
-
+import "../styles/CreatePost.css";
 export default class CreatePost extends Component {
     constructor(props) {
         super(props);

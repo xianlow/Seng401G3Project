@@ -1,19 +1,23 @@
 import React from 'react';
-import './App.css';
-import './style.css';
-import NewsFeed from './components/NewsFeed';
-import Engineering from './departments/Engineering';
+import './styles/App.css';
+import Home from './pages/Homepage';
+import Login from './components/Login';
+import AdminPage from './pages/AdminPage';
+import Engineering from './components/Engineering';
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 function App() {
   return (
       <div className="App">
-        {/* <div className="Left-side">
-          <Sidebar />
-        </div> */}
-        <div className='News-Feed'>
-          <NewsFeed />
-          <Engineering />
-        </div>
+        <Router>
+              <Routes>
+                  <Route exact path="" element={<Home/>}></Route>
+                  <Route exact path="/" element={<Home/>}></Route>
+                  <Route exact path='/login' element={<Login/>}/>
+                  <Route exact path='/adminpage' element={<AdminPage/>}/>
+                  <Route exact path='/Engineering' element={<Engineering/>}/>
+              </Routes>
+          </Router>
       </div>
   );  
 }

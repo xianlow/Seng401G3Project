@@ -1,23 +1,23 @@
 import React from "react";
-import { Route, Routes, useNavigate, Link } from "react-router-dom";
-import Login from "./Login";
+import {useNavigate} from "react-router-dom";
+import "../styles/Newsfeed.css";
 
 function NewsFeed(){
     const navigate = useNavigate();
     const navToLogin = () => {
         navigate('/Login');
     }  
+
+    const navToHomepage = () => {
+        navigate('/');
+    }
+
     return(
-        <div className="feed">
-            <div className="title">
-                <div>
-                    <button onClick={navToLogin}>Log In</button>
-                    <Routes>
-                    <Route exact path='/Login' element={<Login/>} />
-                    </Routes>
-                </div>
-                <Link to="/"><h2>What's New in Rhapsody</h2></Link>
+        <div className="title">
+            <div>
+                <button onClick={navToLogin}>Log In</button>
             </div>
+            <h2 onClick={navToHomepage}>What's New in Rhapsody</h2>
         </div>
     );
 }
