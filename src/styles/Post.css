@@ -1,0 +1,25 @@
+.post{
+    display: flex;
+    align-items: left;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+.post_profile_pic img{
+    height: 60px;
+    padding: 10px;
+}
+
+.post_content {
+    padding: 10px;
+}
+
+.post_text_container h3{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.post_description{
+    margin-bottom: 10px;
+    font-size: 20px;
+}

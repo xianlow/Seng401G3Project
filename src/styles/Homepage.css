@@ -1,0 +1,8 @@
+.News-Feed{
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.News-Feed::-webkit-scrollbar{
+    display: none;
+}
