@@ -6,22 +6,22 @@ const profilePic = "./images/ess-logo.png"
 export default class Engineering extends Component {
   constructor(props) {
     super(props);
-    this.retrieveTutorials = this.retrieveTutorials.bind(this);
+    this.retrievePosts = this.retrievePosts.bind(this);
     this.refreshList = this.refreshList.bind(this);
 
     this.state = {
       test: [],
-      currentTutorial: null,
+      currentPost: null,
       currentIndex: -1,
     };
   }
 
   componentDidMount() {
-    this.retrieveTutorials();
+    this.retrievePosts();
   }
 
 
-  retrieveTutorials() {
+  retrievePosts() {
     testServices.getAll()
       .then(response => {
         this.setState({
@@ -35,14 +35,14 @@ export default class Engineering extends Component {
   }
 
   refreshList() {
-    this.retrieveTutorials();
+    this.retrievePosts();
     this.setState({
-      currentTutorial: null,
+      currentPost: null,
       currentIndex: -1
     });
   }
 
-  removeAllTutorials() {
+  removeAllPosts() {
     testServices.deleteAll()
       .then(response => {
         console.log(response.data);
@@ -61,7 +61,7 @@ export default class Engineering extends Component {
 
           <div className="list-group">
             {test &&
-              test.map((tutorial) => (
+              test.map((Post) => (
                 <div className="post">
                     <div class="post_profile_pic">
                     <img src={profilePic} alt="profile_pic"/>
@@ -72,8 +72,8 @@ export default class Engineering extends Component {
                             <h3>Engineering Department</h3>
                         </div>
                         <div class="post_description">
-                            <p>{tutorial.eventId}</p>
-                            <p>{tutorial.aggregateId}</p>
+                            
+                            <p>{Post.content}</p>
                         </div>
                     </div>
                   </div>

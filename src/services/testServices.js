@@ -10,7 +10,7 @@ class testServices {
   // }
 
   create(data) {
-    return http.post("/AdminPage", data);
+    return http.post("/adminpage", data);
   }
 
   // update(id, data) {
