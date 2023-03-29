@@ -72,7 +72,7 @@ export default class Engineering extends Component {
                             <h3>Engineering Department</h3>
                         </div>
                         <div class="post_description">
-                            
+                            <p>{Post.title}</p>
                             <p>{Post.content}</p>
                         </div>
                     </div>

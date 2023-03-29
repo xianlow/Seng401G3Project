@@ -94,7 +94,7 @@ export default class CreatePost extends Component {
                         </div>
 
                         <div className="form-group">
-                            <h2>Create New Post</h2>
+                            <label htmlFor="Content">Content</label>
                             <br/>
                             <textarea
                                 placeholder="Enter Post..."
