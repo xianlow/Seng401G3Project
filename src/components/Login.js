@@ -39,7 +39,7 @@ function Login() {
                 <input type="text" id="userName" placeholder="Enter Username" name="userName" required /><br />
                 <label for="password">Password:</label><br />
                 <input type="password" id="password" placeholder="Enter Password" name="password" required /> <br />
-                <input type="submit" value="Submit"  />
+                <input type="submit" id="submit" value="Submit"  />
             </form>
             </div>
         </div>

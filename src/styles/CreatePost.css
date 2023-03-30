@@ -1,15 +1,30 @@
-.list {
-    text-align: left;
-    max-width: 750px;
-    margin: auto;
-}
-
 .submit-form {
     max-width: 300px;
     margin: auto;
 }
 
-.edit-form {
-    max-width: 300px;
-    margin: auto;
+.submit-form input{
+    margin: 20px auto;
+	padding: 10px;
+}
+
+.submit-form textarea{
+    margin: 20px auto;
+	padding: 10px;
+}
+
+.submit-form button{
+    justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+
+.submit-form button:hover{
+    background: #FFCCCC;
+    transition: all 0.35s ease;
+    cursor: pointer;
 }

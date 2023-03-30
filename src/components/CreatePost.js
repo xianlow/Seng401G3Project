@@ -82,9 +82,11 @@ export default class CreatePost extends Component {
                     <div>
                         <div className="form-group">
                            <label htmlFor="title">Title</label>
+                           <br />
                            <input
                                type="text"
                                 className="form-control"
+                                placeholder="Enter title"
                                 id="title"
                                 required
                                 value={this.state.title}

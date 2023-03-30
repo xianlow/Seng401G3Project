@@ -4,3 +4,18 @@
     padding: 25px;
     margin: auto;
 }
+
+.login input{
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+
+#submit:hover{
+    background: #FFCCCC;
+    transition: all 0.35s ease;
+}
